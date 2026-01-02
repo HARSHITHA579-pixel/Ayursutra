@@ -3,7 +3,7 @@
 AyurSutra is a **basic web application** built as a small interactive project to understand how real-world healthcare systems work digitally.  
 This project focuses on **Panchakarma therapy management**, helping organize schedules, users, and therapy workflows in a simple and structured way.
 
->  Built while learning frontend and backend technologies step by step.n
+>  Built while learning frontend and backend technologies step by step.
 
 ---
 
