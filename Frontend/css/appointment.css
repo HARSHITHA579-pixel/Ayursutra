@@ -1,0 +1,146 @@
+.main-content {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+
+        .appointment-header {
+            text-align: left;
+            padding: var(--spacing-lg) 50px var(--spacing-md);
+        }
+
+        .appointment-header h1 {
+            font-size: 36px;
+            color: var(--text-dark);
+            font-weight: 400;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-xs) var(--spacing-md);
+            max-width: 400px;
+            margin-top: var(--spacing-md);
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+            font-family: var(--ff-primary);
+            color: var(--text-gray);
+            background: transparent;
+        }
+
+        .search-bar input::placeholder {
+            color: var(--text-light);
+        }
+
+        .appointments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 50px var(--spacing-lg);
+        }
+
+        .appointment-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .appointment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .vamana-img {
+            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23e8f5e9" width="400" height="300"/><g transform="translate(200, 150)"><ellipse cx="0" cy="20" rx="60" ry="80" fill="%23c8e6c9" opacity="0.6"/><ellipse cx="0" cy="-10" rx="50" ry="60" fill="%23a5d6a7" opacity="0.6"/><path d="M -30,-40 Q -30,-60 -20,-70 M 30,-40 Q 30,-60 20,-70 M -40,-10 Q -50,0 -55,10 M 40,-10 Q 50,0 55,10 M -20,30 Q -30,45 -35,55 M 20,30 Q 30,45 35,55" stroke="%234caf50" stroke-width="3" fill="none" stroke-linecap="round"/></g></svg>');
+            background-size: cover;
+        }
+
+        .virechana-img {
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23d4a574" width="400" height="300"/><circle cx="200" cy="150" r="80" fill="%23c9a87c" opacity="0.8"/><circle cx="180" cy="130" r="50" fill="%23b8976b" opacity="0.6"/></svg>');
+            background-size: cover;
+        }
+
+        .card-content {
+            padding: var(--spacing-md);
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-xs);
+            font-weight: 400;
+        }
+
+        .card-subtitle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .card-subtitle::before {
+            content: '🏥';
+            font-size: 12px;
+        }
+
+        .book-btn {
+            width: 100%;
+            background: var(--primary-green);
+            color: var(--bg-white);
+            padding: var(--spacing-sm);
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 16px;
+            font-family: var(--ff-primary);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .book-btn:hover {
+            background: var(--primary-green-dark);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: var(--spacing-sm) var(--spacing-md);
+            }
+
+            nav {
+                gap: var(--spacing-md);
+            }
+
+            .appointment-header {
+                padding: var(--spacing-md) var(--spacing-md);
+            }
+
+            .appointment-header h1 {
+                font-size: 28px;
+            }
+
+            .appointments-grid {
+                grid-template-columns: 1fr;
+                padding: 0 var(--spacing-md) var(--spacing-lg);
+            }}

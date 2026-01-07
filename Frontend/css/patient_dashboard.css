@@ -1,0 +1,80 @@
+/* Main Content */
+        .main-content {
+            margin-top: 100px;
+            padding: var(--spacing-xl) 50px;
+            text-align: center;
+        }
+
+        .dashboard-header {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .page-title {
+            font-size: 42px;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+            font-family: var(--ff-serif);
+        }
+
+        .page-subtitle {
+            font-size: 16px;
+            color: var(--text-gray);
+        }
+
+        /* Dashboard Cards */
+       .dashboard-grid {
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: var(--spacing-lg);
+       margin: 0 auto;
+       }
+
+       @media (max-width: 1024px) {
+       .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+       @media (max-width: 600px) {
+       .dashboard-grid {
+       grid-template-columns: 1fr;
+    }
+}
+
+
+        .dashboard-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-xl) var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-sm);
+            transition: all 0.3s;
+            box-shadow: var(--shadow-card);
+            cursor: pointer;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-green);
+        }
+
+        .dashboard-card h3 {
+            font-size: 22px;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+        }
+
+        .dashboard-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            text-align: center;
+            line-height: 1.5;
+        }
+
+       

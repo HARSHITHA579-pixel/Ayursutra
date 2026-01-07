@@ -1,0 +1,201 @@
+ /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-light);
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: var(--bg-white);
+            max-width: 800px;
+            padding: var(--spacing-md);
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            font-weight: 300;
+            margin-bottom: var(--spacing-xs);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content .brand-name {
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: var(--spacing-md);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .discover-btn {
+            background: var(--accent-green);
+            color: var(--bg-white);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-xl);
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-md);
+        }
+
+        .discover-btn:hover {
+            background: var(--accent-green-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Hospital Selection Section */
+        .hospital-section {
+            background: var(--bg-white);
+            padding: var(--spacing-2xl) 50px;
+            text-align: center;
+        }
+
+        .hospital-section h2 {
+            font-size: 36px;
+            color: var(--primary-green);
+            margin-bottom: var(--spacing-lg);
+            font-weight: 400;
+        }
+
+        .hospital-selector {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-sm);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hospital-selector select {
+            flex: 1;
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-size: 16px;
+            font-family: var(--ff-primary);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-gray);
+            background: var(--bg-white);
+            cursor: pointer;
+            transition: border 0.3s;
+        }
+
+        .hospital-selector select:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        .hospital-selector button {
+            background: var(--primary-green);
+            color: var(--bg-white);
+            padding: var(--spacing-sm) 25px;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .hospital-selector button:hover {
+            background: var(--primary-green-dark);
+        }
+
+        /* Panchakarma Section */
+        .panchakarma-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 60vh;
+        }
+
+        .panchakarma-image {
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect fill="%23c9a87c" width="600" height="400"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .panchakarma-content {
+            background: var(--bg-light);
+            padding: var(--spacing-2xl) var(--spacing-xl);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .panchakarma-content h2 {
+            font-size: 48px;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-md);
+            font-family: var(--ff-serif);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: var(--spacing-sm) var(--spacing-md);
+            }
+
+            nav {
+                gap: var(--spacing-md);
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content .brand-name {
+                font-size: 48px;
+            }
+
+            .hospital-section {
+                padding: 50px var(--spacing-md);
+            }
+
+            .hospital-selector {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .panchakarma-section {
+                grid-template-columns: 1fr;
+            }
+
+            .panchakarma-content {
+                padding: var(--spacing-lg) 30px;
+            }
+        }

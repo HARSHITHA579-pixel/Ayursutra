@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Ayursutra</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/appointment_sheduling.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../photos/logo.png" alt="Ayrusutra Logo">
+            <div class="heading">AYURSUTRA</div> 
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+        </nav>
+        <div class="header-right">
+            <span class="search-icon">🔍</span>
+            <a href="LoginPage.html"
+            <span class="login-in">Login in</span>
+            </a>
+            <a href="#contact" class="contact-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <a href="#" class="back-link">← All Appointments</a>
+        
+        <div class="breadcrumb">
+            <span id="dateTimeTab">Date & time</span>
+            <span>›</span>
+            <span id="detailsTab">Details</span>
+            <span>›</span>
+            <span>Booked</span>
+        </div>
+
+        <div class="view-tabs">
+            <button class="tab-btn active" onclick="showView('booking')">Booking</button>
+            <button class="tab-btn" onclick="showView('summary')">Summary</button>
+        </div>
+
+        <div class="booking-container">
+            <div class="booking-main active" id="bookingView">
+                <h1 class="page-title" id="pageTitle">Select a date & time</h1>
+
+                <!-- Date & Time View -->
+                <div id="dateTimeView">
+                    <div class="calendar-section">
+                        <div class="calendar-header">October 2025</div>
+                        <div class="calendar">
+                            <div class="calendar-day-header">Sun</div>
+                            <div class="calendar-day-header">Mon</div>
+                            <div class="calendar-day-header">Tue</div>
+                            <div class="calendar-day-header">Wed</div>
+                            <div class="calendar-day-header">Thu</div>
+                            <div class="calendar-day-header">Fri</div>
+                            <div class="calendar-day-header">Sat</div>
+                            <div class="calendar-day empty"></div>
+                            <div class="calendar-day empty"></div>
+                            <div class="calendar-day empty"></div>
+                            <div class="calendar-day">1</div>
+                            <div class="calendar-day">2</div>
+                            <div class="calendar-day selected">3</div>
+                            <div class="calendar-day">4</div>
+                            <div class="calendar-day">5</div>
+                            <div class="calendar-day">6</div>
+                            <div class="calendar-day">7</div>
+                            <div class="calendar-day">8</div>
+                            <div class="calendar-day">9</div>
+                            <div class="calendar-day">10</div>
+                            <div class="calendar-day">11</div>
+                            <div class="calendar-day">12</div>
+                            <div class="calendar-day">13</div>
+                            <div class="calendar-day">14</div>
+                            <div class="calendar-day">15</div>
+                            <div class="calendar-day">16</div>
+                            <div class="calendar-day">17</div>
+                            <div class="calendar-day">18</div>
+                            <div class="calendar-day">19</div>
+                            <div class="calendar-day">20</div>
+                            <div class="calendar-day">21</div>
+                            <div class="calendar-day">22</div>
+                            <div class="calendar-day">23</div>
+                            <div class="calendar-day">24</div>
+                            <div class="calendar-day">25</div>
+                            <div class="calendar-day">26</div>
+                            <div class="calendar-day">27</div>
+                            <div class="calendar-day">28</div>
+                            <div class="calendar-day">29</div>
+                            <div class="calendar-day">30</div>
+                            <div class="calendar-day">31</div>
+                        </div>
+                        <select class="timezone-select">
+                            <option>Timezone: Asia/Calcutta</option>
+                        </select>
+                    </div>
+
+                    <div class="time-slots">
+                        <h3>Select a time</h3>
+                        <div class="time-grid">
+                            <div class="time-slot">9:00 am</div>
+                            <div class="time-slot">10:00 am</div>
+                            <div class="time-slot">11:00 am</div>
+                            <div class="time-slot">2:00 pm</div>
+                            <div class="time-slot">3:00 pm</div>
+                            <div class="time-slot">4:00 pm</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Details View (hidden by default) -->
+                <div id="detailsView" style="display: none;">
+                    <p style="margin-bottom: 20px; color: var(--text-gray);">
+                        Add more details about you or <a href="#" style="color: var(--primary-green);">Sign in</a>
+                    </p>
+
+                    <div class="form-group">
+                        <label>Full name*</label>
+                        <input type="text" value="K.Harshitha" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email*</label>
+                        <input type="email" value="support@ayursutra.com" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone number*</label>
+                        <input type="tel" value="7634927931+3434" placeholder="Enter your phone">
+                        <div class="phone-note">
+                            ℹ️ We will use it to remind you of this appointment
+                        </div>
+                    </div>
+
+                    <button class="confirm-btn" onclick="completeBooking()">Confirm Appointment</button>
+                </div>
+            </div>
+
+            <aside class="booking-summary" id="summaryView">
+                <div class="summary-image"></div>
+                <h2 class="summary-title">Virechana</h2>
+                
+                <div class="summary-section">
+                    <div class="summary-label">Meeting Details</div>
+                    <div class="summary-value">📍 Hospital</div>
+                    <div class="summary-value">⏱️ 1 hour</div>
+                </div>
+
+
+                <div class="summary-section" id="dateTimeSection" style="display: none;">
+                    <div class="summary-label">Date & Time</div>
+                    <div class="summary-value large">📅 Fri 03-Oct-2025</div>
+                    <div class="summary-value">🕐 4:00 pm Asia/Calcutta</div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Useful Links -->
+            <div class="footer-section">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#legal">Legal</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- About Us -->
+            <div class="footer-section">
+                <h3>About us</h3>
+                <p>At <strong>Ayursutra</strong>, we believe in the ancient wisdom of Ayurveda to bring balance and harmony back to your life. Our mission is to make authentic Panchakarma therapy accessible to all.</p>
+                <p>We've created this platform to be your guide on a journey to holistic health. Here, you can easily book appointments, and connect with certified practitioners who are dedicated to healing.</p>
+            </div>
+
+            <!-- Connect With Us -->
+            <div class="footer-section">
+                <h3>Connect with us</h3>
+                <div class="contact-info">
+                    <span>📧</span>
+                    <a href="mailto:support@ayursutra.com">support@ayursutra.com</a>
+                </div>
+                <div class="contact-info">
+                    <span>📞</span>
+                    <span>+1 555-555-5556</span>
+                </div>
+                <div class="social-links">
+                    <a href="#facebook" title="Facebook">f</a>
+                    <a href="#twitter" title="Twitter">𝕏</a>
+                    <a href="#linkedin" title="LinkedIn">in</a>
+                    <a href="#website" title="Website">🌐</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+    <script>
+        let currentView = 'dateTime';
+
+        // Calendar day selection
+        document.querySelectorAll('.calendar-day:not(.empty)').forEach(day => {
+            day.addEventListener('click', function() {
+                document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // Time slot selection
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', function() {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                this.classList.add('selected');
+                
+                // Show date/time in summary and enable next step
+                document.getElementById('dateTimeSection').style.display = 'block';
+                
+                // Change to details view
+                setTimeout(() => {
+                    switchToDetails();
+                }, 500);
+            });
+        });
+
+        function switchToDetails() {
+            currentView = 'details';
+            document.getElementById('pageTitle').textContent = 'Add more details about you or Sign in';
+            document.getElementById('dateTimeView').style.display = 'none';
+            document.getElementById('detailsView').style.display = 'block';
+            document.getElementById('detailsTab').classList.add('active');
+            document.getElementById('dateTimeTab').classList.remove('active');
+        }
+
+        function completeBooking() {
+            alert('Appointment confirmed! 🎉');
+        }
+
+        function showView(view) {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const bookingView = document.getElementById('bookingView');
+            const summaryView = document.getElementById('summaryView');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            if (view === 'booking') {
+                tabs[0].classList.add('active');
+                bookingView.classList.add('active');
+                summaryView.classList.remove('active');
+            } else {
+                tabs[1].classList.add('active');
+                summaryView.classList.add('active');
+                bookingView.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
