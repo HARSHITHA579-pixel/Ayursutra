@@ -1,3 +1,4 @@
+//basic css for each and every webpage
 :root {
     --primary-green: #2d7a5e;
     --primary-green-dark: #236b50;
@@ -241,4 +242,5 @@ nav a:hover {
                 grid-template-columns: 1fr;
                 gap: var(--spacing-lg);
             }
+
         }
